@@ -1,0 +1,455 @@
+{
+	"appData":[
+		{
+			"title" : "Wizard Entity Tool",
+			"version" : "1.0",
+			"description": "Use our tool to compare different business formation options and help you determine which one will suit your business best."
+		}
+	],
+	"questions": [
+		{
+		"question" : "How many people will have ownership in your company?",
+		"footnote" : "The number of individuals sharing ownership in an LLC determines whether it is treated like a partnership or as a sole proprietorship. Partnerships cannot have less than 2 owners, and an S Corporation cannot exceed 100 owners and some of the ownership characteristics are limited. A corporation can have an unlimited number of owners.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "1",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 0,
+				"Non_Profit" : 1,
+				"Professional_LLC" : 1,
+				"DBA" : 3
+				},
+				{
+				"stringvalue" : "2 - 99",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 1,
+				"Professional_LLC" : 1,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "100 or more",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": "disable",
+				"Non_Profit" : "disable",
+				"Professional_LLC" : 1,
+				"DBA" : "disable"
+				}
+			]
+		},
+		{
+		"question" : "Do owners and/or shareholders plan to benefit financially from this business? ( not including a salary )",
+		"footnote" : "Forming a Non-Profit Corporation (also known as a Not-for-Profit Corporation) provides personal asset protection and formalization of your business structure. Entities must qualify under the U.S. Internal Revenue Code Section 501(c). You will need to undertake a separate IRS filing to receive 'tax exempt' status. If you intend on combining a for-profit business with a public benefit purpose, you may consider a benefit corporation or 'B-Corporation,' which is available in some states.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : "disable",
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 0,
+				"C_Corp": 0,
+				"S_Corp": 0,
+				"Non_Profit" : 14,
+				"Professional_LLC" : 0,
+				"DBA" : 0
+				}	
+			]
+		},
+		{
+		"question" : "Is your business centered in a public benefit or charitable cause?",
+		"footnote" : "If your business is a charity or set up for public benefit, your organization may be eligible for state and federal exemptions from corporate income taxes plus certain other taxes. Federal corporate tax rates can run as high as 35% while state corporate taxes can take a bite as well. If you expect to earn substantial amounts of money from your services, exhibits, product sales, or performances, you'll likely want to seek an exemption. A tax-exempt nonprofit will also save on local taxes such as levied by your state, and county.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 15,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : "disable",
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				}	
+			]
+		},
+		{
+		"question" : "Will any owners or shareholders be employees of the company (and receive payroll benefits)?",
+		"footnote" : "Often when a business is owned by or partially by its employees, an ESOP (employee stock ownership plan) can be set up as a kind of employee benefit plan. Shareholders of an S Corporation must distribute shares equal to the percentage of ownership of each shareholder. An LLC, however, can attribute shares of profit disproportionate to the capital investment of each of its members.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 1,
+				"C_Corp": 3,
+				"S_Corp": 3,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				}	
+			]
+		},
+		{
+		"question" : "Do you plan on seeking a loan from a bank or other lender to fund your business?",
+		"footnote" : "If you are planning on accepting a loan to fund your business, you are at risk of becoming personally liable for the debts of the business in some cases if you choose not to formally form an entity. A bank can repossess personal property in lieu of debts accrued by the business.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 3,
+				"C_Corp": 3,
+				"S_Corp": 3,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				},
+				{
+				"stringvalue" : "Not Sure",
+				"LLC": 0,
+				"C_Corp": 0,
+				"S_Corp": 0,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 0
+				}
+			]
+		},
+		{
+		"question" : "Do you have significant personal assets to protect?",
+		"footnote" : "If you have significant assets to protect, then it makes the most sense to choose an entity type which affords you limited liability. This prevents your personal and family assets from being held against the debts of your business.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 2,
+				"C_Corp": 2,
+				"S_Corp": 2,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 2,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 3
+				}
+			]
+		},
+		{
+		"question" : "Is your business centered on real estate investments?",
+		"footnote" : "Investment properties inherently create liabilities for a business owner. The purpose of a limited liability company (LLC) is to protect the assets of the owners of the real estate from potential liabilities arising from that property. That is the main benefit of an LLC. An LLC also allows you to hold yourself out to the world as an owner of a property that is held by a company. For some owners of investment properties, it makes them feel more reputable to say that they are the manager of an LLC or the owner of an LLC when dealing with their tenants.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 2,
+				"C_Corp": -1,
+				"S_Corp": -1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : -1,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				}
+			]
+		},
+		{
+		"question" : "Will your company be conducting business in an industry vulnerable to lawsuits of any kind?",
+		"footnote" : "If your industry is vulnerable to lawsuits, you want to make sure that your personal assets are protected. You do not want assets to be repossessed by the state, to risk the liability of your partners (even if you fully trust them), or to expose yourself to losing your home, cars, or valuable assets. Creditors may include vendors, employees, banks, etc.  Separating your personal assets from those of other partners and from your business is an important first step to take, especially if your business is one that is vulnerable to lawsuits.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 2,
+				"C_Corp": 2,
+				"S_Corp": 2,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 2,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				}
+			]
+		},
+		{
+		"question" : "Do you require a professional license to operate? ( ex: Doctors, Lawyers, Accountants etc. )",
+		"footnote" : "If your industry is vulnerable to lawsuits, you want to make sure that your personal assets are protected. You do not want assets to be repossessed by the state, to risk the liability of your partners (even if you fully trust them), or to expose yourself to losing your home, cars, or valuable assets. Creditors may include vendors, employees, banks, etc.  Separating your personal assets from those of other partners and from your business is an important first step to take, especially if your business is one that is vulnerable to lawsuits.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 2,
+				"C_Corp": 2,
+				"S_Corp": 2,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 8,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : "disable",
+				"DBA" : 1
+				}
+			]
+		},
+		{
+		"question" : "Is double taxation a concern?",
+		"footnote" : "Many people have heard that corporate income is taxed twice: once to the corporation itself and then a second time when earnings are paid out to the corporation's owners (shareholders). This is true only for earnings paid out to shareholders in the form of dividends - that is, profits paid by the corporation to its shareholders in return for their investment in the company.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 3,
+				"C_Corp": -2,
+				"S_Corp": 3,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 2,
+				"DBA" : 1
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 2,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				}
+			]
+		},
+		{
+		"question" : "Are you concerned about self-employment taxes?",
+		"footnote" : "Certain entity types will assist you in minimizing self-employment taxes. Shareholders of S-Corporations do not pay self-employment tax if they are actively engaged as a shareholder-employee of the S-Corporation. Why? Shareholder-employees are paid a salary, with their wages reported on a W-2 and with Social Security and Medicare taxes already withheld. Shareholder-employees will therefore receive two tax documents from the S-Corporation: a W-2 wage statement and a Schedule K-1 statement.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": -1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : -1,
+				"DBA" : -3
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 2,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 2,
+				"DBA" : 2
+				}
+			]
+		},
+		{
+		"question" : "What types of benefits will your business offer ( if any )?",
+		"footnote" : "Because of rules and business regulations, only certain types of businesses can offer certain benefits. Benefits are any perks offered to employees in addition to salary. The most common benefits are medical, disability, and life insurance, retirement benefits, paid time off, and fringe benefits. Benefits can be quite valuable especially in the case of medical insurance, which without assistance can cost several hundred dollars a month. That's why it's important to consider benefits as part of your total compensation.",
+		"allowMultiple" : 1,
+		"answers":[
+				{
+				"stringvalue" : "Company Funded Medical Insurance",
+				"LLC": 0,
+				"C_Corp": 1,
+				"S_Corp": 0,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 0,
+				"DBA" : -2
+				},
+				{
+				"stringvalue" : "Flexible Spending Accounts",
+				"LLC": 0,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 0,
+				"DBA" : 0
+				},
+				{
+				"stringvalue" : "Retirement Benefits",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : -2
+				},
+				{
+				"stringvalue" : "None",
+				"LLC": 0,
+				"C_Corp": 0,
+				"S_Corp": 0,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 0,
+				"DBA" : 0
+				}
+			]
+		},
+		{
+		"question" : "Do you want to minimize your record keeping and administrative requirements?",
+		"footnote" : "Limited Liability Companies (LLCs) are a popular entity choice for businesses because they receive the same limited liability protection as corporations, but avoid some of the more burdensome record keeping and other corporate formalities that corporations must follow. Although the level of record keeping for an LLC is less onerous than for a corporation, there are still rules you must be follow with regard to your LLC in order to maintain the LLC's limited liability status. What documents an LLC must keep varies according to state law. However, at a minimum, it's a good idea for all LLCs to maintain the following records related to the LLC's organization and finances.",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Yes",
+				"LLC": 2,
+				"C_Corp": -1,
+				"S_Corp": -1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 2,
+				"DBA" : 2
+				},
+				{
+				"stringvalue" : "No",
+				"LLC": 1,
+				"C_Corp": 2,
+				"S_Corp": 2,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : 1
+				}
+			]
+		},
+		{
+		"question" : "What are the main goals of your business?",
+		"allowMultiple" : 1,
+		"answers":[
+				{
+				"stringvalue" : "I'd like to sell my business for a profit",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : "disable",
+				"Professional_LLC" : 1,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "I'd like to keep my business in the family",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "I'd to offer stock in my company",
+				"LLC": "disable",
+				"C_Corp": 3,
+				"S_Corp": 3,
+				"Non_Profit" : "disable",
+				"Professional_LLC" : "disable",
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "I'd like my business to exist in perpetuity",
+				"LLC": 1,
+				"C_Corp": 1,
+				"S_Corp": 1,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 1,
+				"DBA" : "disable"
+				},
+				{
+				"stringvalue" : "None",
+				"LLC": 0,
+				"C_Corp": 0,
+				"S_Corp": 0,
+				"Non_Profit" : 0,
+				"Professional_LLC" : 0,
+				"DBA" : 0
+				}
+			]
+		}				
+	],
+	"results":[
+		{
+			"choice" : "LLC",
+			"description": "Based on your answers, an LLC may be the best entity for your business. This result is not a substitute for the advice of an attorney. Forming a limited liability company (LLC) provides benefits and liability protection for any type of business with a relatively low amount of maintenance.",
+			"link" : "/business-formations/llc.jsp"
+		},
+		{
+			"choice" : "C_Corp",
+			"description": "Based on your answers, an C-Corporation may be the best entity for your business. This result is not a substitute for the advice of an attorney. Forming a C-corporation provides personal asset protection and formalization of your business structure. It serves as a separation of your personal assets from those of your business and enables the business to take on investors.",
+			"link" : "/business-formations/c-corporation.jsp"
+		},
+		{
+			"choice" : "S_Corp",
+			"description": "Based on your answers, you may want to file a S-Corp Election. This result is not a substitute for the advice of an attorney. An S-Corp Election is a tax-related filing. Many people think that an S-Corporation is a type of corporation, but really, an S-Corporation is a C-Corporation with an S-Corporation tax election. When the S-Corp tax election is made, the entity is telling the federal government that it would like to be taxed as a partnership rather than as a corporation. This is often done to avoid taxation at the corporate level and then again when distributions are made (at the individual level).",
+			"link" : "/business-formations/s-corporations.jsp"
+		},
+		{
+			"choice" : "Non_Profit",
+			"description": "Based on your answers, an NonProfit may be the best entity for your business. This result is not a substitute for the advice of an attorney. Non-profit organizations use surplus revenues to achieve goals rather than distributing them as profit or dividends. Forming a nonprofit often entitles your business to special deductions and tax breaks.",
+			"link" : "/business-formations/non-profit.jsp"
+		},
+		{
+			"choice" : "Professional_LLC",
+			"description": "Based on your answers, a Professional LLC may be the best entity for your business. This result is not a substitute for the advice of an attorney. Typically, professions where the state requires a license to provide services, such as a doctor,lawyer, accountant, architect,engineer etc., require the formation of a PLLC.",
+			"link" : "/business-formations/professional-llc.jsp"
+		},
+		{
+			"choice" : "DBA",
+			"description": "Based on your answers, you may want to file a DBA for your business. This result is not a substitute for the advice of an attorney. A DBA ( Doing Business As ) filing allows you or your business to conduct business and receive payment under a name different than your legal name. For many sole proprietors or freelance workers, this option is a viable option to help show professionalism and accept payments under a business name, for existing businesses, it allows you to accept payment under an alternate name in addition to your registered business name.",
+			"link" : "/business-formations/dba.jsp"
+		}
+	]
+}

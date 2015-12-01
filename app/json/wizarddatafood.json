@@ -1,0 +1,114 @@
+{
+	"appData":[
+		{
+			"title" : "Whats your favorite condiment?",
+			"version" : "1.0",
+			"description": "What are some of your favorite condiments? This quiz will tell you ( sort of )"
+		}
+	],
+	"questions": [
+		{
+		"question" : "What is your favorite color?",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Red",
+				"Ketchup": 1,
+				"Mustard": 0,
+				"Salsa": 1,
+				"Mayonaise" : 0
+				},
+				{
+				"stringvalue" : "Yellow",
+				"Ketchup": 0,
+				"Mustard": 1,
+				"Salsa": 0,
+				"Mayonaise" : 0
+				},
+				{
+				"stringvalue" : "White",
+				"Ketchup": 0,
+				"Mustard": 0,
+				"Salsa": 0,
+				"Mayonaise" : 1
+				}
+			]
+		},
+		{
+		"question" : "Do you prefer spicy or sweet?",
+		"allowMultiple" : 0,
+		"answers":[
+				{
+				"stringvalue" : "Spicy",
+				"Ketchup": -1,
+				"Mustard": 1,
+				"Salsa": 1,
+				"Mayonaise" : 0
+				},
+				{
+				"stringvalue" : "Sweet",
+				"Ketchup": 2,
+				"Mustard": 0,
+				"Salsa": -1,
+				"Mayonaise" : 0
+				}
+			]
+		},
+		{
+		"question" : "What kinds of foods do you like most?",
+		"allowMultiple" : 1,
+		"answers":[
+				{
+				"stringvalue" : "Sandwich",
+				"Ketchup": 0,
+				"Mustard": 1,
+				"Salsa": 0,
+				"Mayonaise" : 2
+				},
+				{
+				"stringvalue" : "Hot Dogs and Hamburgers",
+				"Ketchup": 1,
+				"Mustard": 1,
+				"Salsa": 0,
+				"Mayonaise" : 0
+				},
+				{
+				"stringvalue" : "Tacos",
+				"Ketchup": 0,
+				"Mustard": 0,
+				"Salsa": 2,
+				"Mayonaise" : 0
+				},
+				{
+				"stringvalue" : "Nachos",
+				"Ketchup": 0,
+				"Mustard": 0,
+				"Salsa": 2,
+				"Mayonaise" : 0
+				}
+			]
+		}
+	],
+	"results":[
+		{
+			"choice" : "Ketchup",
+			"description": "Use our tool to compare different business formation options and help you determine which one will suit your business best.",
+			"link" : "http://www.somelink.com"
+		},
+		{
+			"choice" : "Mustard",
+			"description": "Use our tool to compare different business formation options and help you determine which one will suit your business best.",
+			"link" : "http://www.somelink.com"
+		},
+		{
+			"choice" : "Salsa",
+			"description": "Use our tool to compare different business formation options and help you determine which one will suit your business best.",
+			"link" : "http://www.somelink.com"
+		},
+		{
+			"choice" : "Mayonaise",
+			"description": "Use our tool to compare different business formation options and help you determine which one will suit your business best.",
+			"link" : "http://www.somelink.com"
+		}
+	]
+}

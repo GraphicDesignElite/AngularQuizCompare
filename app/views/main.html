@@ -1,0 +1,73 @@
+<div class="row">
+	<div class="col-md-12">
+		<h1>{{appData.title}}</h1>
+		<p>{{appData.description}}</p>
+	</div>
+</div>
+<form id="wizard">
+<button class="btn" id="refresh" ng-click="restart()"><i class="fa fa-refresh"></i></button>
+<p>Current Progress:</p>
+<div class="progress-bar-container clearfix">
+	<span class="progress-bar" ng-style="updateProgress(value)"></span>
+</div>
+<div class="row">
+	<div class="col-md-8">
+		<div ng-repeat="question in questions" class="question-panel clearfix" ng-show="(($index == currentQuestion) && (!showResults))"> <!-- create one for every question, show only the current question -->
+			<p>{{question.question}}</p> <!-- spit out the question -->
+			<ul>
+				<!-- Start one answer -->
+				<li ng-repeat="answer in question.answers" class="answersContainer">
+					<!-- If we allow multiple choices lets use checkboxes -->
+					<span ng-if="question.allowMultiple">
+						<input type="checkbox" name="question{{$parent.$parent.$index}}" class="question{{$parent.$parent.$index}}" value="{{question.answers[$index]}}"
+							ng-click="calculateComparision($parent.$parent.$index, {{question.answers[$index]}})">&nbsp;{{question.answers[$index].stringvalue}}
+					</span>
+					<!-- If we dont allow multiple choices lets use radio buttons -->
+					<span ng-if="!question.allowMultiple">
+						<!-- repeat a selection for every available answer, and on click recalculate the totals -->
+						<input type="radio" name="question{{$parent.$parent.$index}}" value="{{question.answers[$index]}}" 
+							ng-click="calculateComparision($parent.$parent.$index, {{question.answers[$index]}})">&nbsp;{{question.answers[$index].stringvalue}} <!-- pass question index and applicable answer object from json -->
+					</span>
+				</li>
+				<!-- End one answer -->
+			</ul>
+			<br/>
+			<button class="btn" ng-click="previousQuestion($index)" ng-disabled="currentQuestion == 0">Previous</button>	
+			<button class="btn" ng-click="nextQuestion($index)" ng-disabled="enableBtn($index)" ng-show="!showFinish">Next</button> <!-- we can only move forward once we have supplied an answer -->
+			<button class="btn" ng-click="showResult()" ng-disabled="enableBtn($index)" ng-show="showFinish">Finish</button> <!-- enabled when we finish -->
+			<div class="foot-note-wrapper">
+				<p class="foot-note" ng-show="{{question.footnote != null}}"><i class="fa fa-info-circle"></i> {{question.footnote}}</p>
+			</div>
+			<p class="question-number">{{currentQuestion + 1}} of {{numQuestions}}</p>		
+		</div>
+		
+		<!-- show on quiz completion -->
+		<div id="showResults" class="question-panel" ng-show="showResults">
+			<div class="results" ng-repeat="winner in winners" ng-show="showAnswer == $index">	
+				<h3>{{ winner.choice | stringify }}</h3>
+				<p>{{winner.description}}</p>
+				<button class="btn" ng-click="backToQuiz()">Back to Quiz</button>
+				<a class="btn" ng-href="{{winner.link}}">Learn More</a>
+				<!-- <a class="btn btn-default" ng-href="{{ winner.link }}" ng-show="{{ winner.link }}">Learn More</a>-->
+			</div>
+			<div ng-show="winners.length > 1" class="warningNote clearfix">
+				<div class="prev-next-result">
+					<button class="btn" id="prev-result-button" ng-click="prevResult()" ng-disabled="showAnswer < 1"><i class="fa fa-chevron-circle-left"></i></button>
+					<button class="btn" id="next-result-button" ng-click="nextResult()" ng-disabled="showAnswer >= winners.length -1"><i class="fa fa-chevron-circle-right"></i></button>
+				</div>
+				<span>Multiple Results Found!</span>
+			</div>
+		</div>
+		
+		
+	</div><!-- end col-md-6 -->
+	<div class="col-md-4">
+		<ul class="percentage-bars">
+			<li ng-repeat="(key, value) in currentScore" ng-show="key != 'stringvalue'" class="score-display" ng-class="{'disabled': !isNumber(value)}">
+				<span class="percentage-bar-display" ng-style="updatePoints(value)"></span>
+				<span class="percentage-bar-name">{{key | stringify }} : <span class="percentage-bar-percentage" ng-show="isNumber(value)">{{((value / highestScore) * 100) | setDecimal}}%</span></span>
+			</li>
+		</ul>
+	</div>
+</div>
+</form> 
